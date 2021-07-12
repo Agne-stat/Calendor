@@ -1,4 +1,6 @@
 import express from 'express';
+import UserControler from '../user/userControler.js'
+
 
 const router = express.Router();
 
@@ -7,6 +9,11 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.json('Hello')
 })
+
+// user
+router.post('/signup', UserControler.signUp);
+router.post('/login', UserControler.logIn);
+
 
 
 
